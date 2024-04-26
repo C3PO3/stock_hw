@@ -1,7 +1,7 @@
-
 const express = require('express');
 const app = express();
 const path = require('path');
+const processStock = require('./process_stock');
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -14,12 +14,11 @@ app.get('/process_stock.js', (req, res) => {
     const searchTerm = req.query.searchTerm;
     const searchType = req.query.searchType;
 
-    // You can perform further processing here, like fetching data from an API
-    console.log('WORKING HERE');
+    // Execute the processing logic from process_stock.js
+    const result = processStock.processStockData(searchTerm, searchType);
 
-    res.sendFile(path.join(__dirname, 'process_stock.js'));
-
-    // res.send(`You searched for ${searchTerm} with type ${searchType}`);
+    // Sending the result as response
+    res.send(result);
 });
 
 const PORT = process.env.PORT || 3000;
