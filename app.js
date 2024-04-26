@@ -5,13 +5,6 @@ const path = require('path');
 
 app.use(express.urlencoded({ extended: true }));
 
-// MongoDB connection URI
-// const uri = 'mongodb+srv://liagriffeon:zG2KLn57TAQ65IN6@stock.1k5sojy.mongodb.net'; // Update with your MongoDB connection URI
-// const dbName = 'Stock';
-// const collectionName = 'PublicCompanies';
-
-// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
