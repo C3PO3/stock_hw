@@ -12,6 +12,8 @@ const collectionName = 'PublicCompanies';
 // MongoDB client
 const client = new MongoClient(uri);
 
+console.log("AHHHHHHHHHHHH");
+
 client.connect(err => {
     if (err) {
         console.error('Error connecting to MongoDB:', err);
