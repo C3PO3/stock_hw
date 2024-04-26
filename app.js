@@ -9,17 +9,19 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// app.get('/process_stock.js', (req, res) => {
-//     // Handle form submission here
-//     const searchTerm = req.query.searchTerm;
-//     const searchType = req.query.searchType;
+app.get('/process_stock.js', (req, res) => {
+    // Handle form submission here
+    const searchTerm = req.query.searchTerm;
+    const searchType = req.query.searchType;
 
-//     // Execute the processing logic from process_stock.js
-//     const result = processStock.processStockData(searchTerm, searchType);
+    res.sendFile(path.join(__dirname, 'process_stock.js'));
 
-//     // Sending the result as response
-//     res.send(result);
-// });
+    // // Execute the processing logic from process_stock.js
+    // const result = processStock.processStockData(searchTerm, searchType);
+
+    // // Sending the result as response
+    // res.send(result);
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
