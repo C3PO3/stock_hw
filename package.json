@@ -2,13 +2,13 @@
     "name": "salty-peak-79064",
     "version": "1.0.0",
     "description": "Uses html and nodejs to read stocks and their ticker symbols",
-    "main": "process_stock.html",
+    "main": "app.js",
     "scripts": {
-        "start": "http-server -p 3000"
+        "start": "node app.js"
     },
     "dependencies": {
-    "express": "^4.17.1",
-    "http-server": "^0.12.3",
-    "mongodb": "^4.0.0"
+        "express": "^4.19.2",
+        "http-server": "^0.12.3",
+        "mongodb": "^4.0.0"
     }
 }
