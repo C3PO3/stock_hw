@@ -2,7 +2,7 @@
     "name": "salty-peak-79064",
     "version": "1.0.0",
     "description": "Uses html and nodejs to read stocks and their ticker symbols",
-    "main": "process_stock.js",
+    "main": "process_stock.html",
     "scripts": {
         "start": "http-server -p $PORT"
     },
