@@ -9,6 +9,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+const app = require('./process.js');
 app.get('/process_stock.js', (req, res) => {
     // Handle form submission here
     const searchTerm = req.query.searchTerm;
