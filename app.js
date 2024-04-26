@@ -28,7 +28,7 @@ app.get('/process_stock.js', (req, res) => {
     res.sendFile(path.join(__dirname, 'process_stock.js'));
 });
 
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => {
-//     console.log(`Server is running on port ${PORT}`);
-// });
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
