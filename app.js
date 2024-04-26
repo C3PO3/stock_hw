@@ -14,13 +14,13 @@ app.get('/process_stock.js', (req, res) => {
     const searchTerm = req.query.searchTerm;
     const searchType = req.query.searchType;
 
-    res.sendFile(path.join(__dirname, 'process_stock.js'));
+    // res.sendFile(path.join(__dirname, 'process_stock.js'));
 
-    // // Execute the processing logic from process_stock.js
-    // const result = processStock.processStockData(searchTerm, searchType);
+    // Execute the processing logic from process_stock.js
+    const result = processStock.processStockData(searchTerm, searchType);
 
-    // // Sending the result as response
-    // res.send(result);
+    // Sending the result as response
+    res.send(result);
 });
 
 const PORT = process.env.PORT || 3000;
