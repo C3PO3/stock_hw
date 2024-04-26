@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "description": "Uses html and nodejs to read stocks and their ticker symbols",
     "main": "process_stock.html",
-    "scripts": {
-        "start": "http-server -p 8080"
+    "env": {
+        "PORT": 3000
     },
     "dependencies": {
     "express": "^4.17.1",
