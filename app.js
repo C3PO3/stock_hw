@@ -15,6 +15,7 @@ app.get('/process_stock.js', (req, res) => {
     const searchType = req.query.searchType;
 
     // You can perform further processing here, like fetching data from an API
+    console.log('WORKING HERE');
 
     res.send(`You searched for ${searchTerm} with type ${searchType}`);
 });
