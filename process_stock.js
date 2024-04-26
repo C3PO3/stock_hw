@@ -10,7 +10,7 @@ const dbName = 'Stock';
 const collectionName = 'PublicCompanies';
 
 // MongoDB client
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const client = new MongoClient(uri);
 
 client.connect(err => {
     if (err) {
