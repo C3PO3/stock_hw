@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 3000; // Use dynamic port provided by Heroku or default to 3000
 
 // MongoDB connection URI
-const uri = 'mongodb+srv://username:password@host/database'; // Update with your MongoDB connection URI
+const uri = 'mongodb+srv://liagriffeon:zG2KLn57TAQ65IN6@stock.1k5sojy.mongodb.net'; // Update with your MongoDB connection URI
 const dbName = 'Stock';
 const collectionName = 'PublicCompanies';
 
