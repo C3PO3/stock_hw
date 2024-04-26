@@ -1,3 +1,4 @@
+
 const express = require('express');
 const { MongoClient } = require('mongodb');
 
@@ -19,7 +20,7 @@ async function startServer() {
         await client.connect();
         console.log('Connected to MongoDB');
 
-        app.get('/process', async (req, res) => {
+        app.get('/process_stock', async (req, res) => {
             try {
                 const searchTerm = req.query.searchTerm;
                 const searchType = req.query.searchType;
@@ -47,10 +48,6 @@ async function startServer() {
                 console.error('Error processing request:', error);
                 res.status(500).send('Internal Server Error');
             }
-        });
-
-        app.listen(port, () => {
-            console.log(`Server running at http://localhost:${port}`);
         });
     } catch (error) {
         console.error('Error connecting to MongoDB:', error);
